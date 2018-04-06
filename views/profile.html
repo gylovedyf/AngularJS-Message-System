@@ -1,0 +1,14 @@
+<h1>My Profile</h1>
+
+<table class='table'>
+    <tr>
+        <th>Property</th>
+        <th>Value</th>
+    </tr>
+    <tr ng-repeat='(key, value) in user'>
+        <td>{{key}}</td>
+        <td>{{value}}</td>
+    </tr>
+</table>
+<a class='btn btn-info' href="#/edit">Update</a>
+<a class='btn btn-info' href="#/home">Cance</a>

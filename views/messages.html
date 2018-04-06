@@ -1,0 +1,37 @@
+
+<div class='container'>
+    <div class='row'>
+        <h1 class='text-center'>Message Page</h1>
+        <div class='col-md-6 col-md-offset-3'>
+            <table class='table'>
+                <tr>
+                    <th>From</th>
+                    <th>Title</th>
+                    <th>Detail</th>
+                    <th>Starred</th>
+                </tr>
+                <tr ng-repeat='message in messages track by $index'>
+                    <td>{{message.sender}}</td>
+                    <td>{{message.title}}</td>
+                    <td>
+                        <a class='btn btn-success' href='#/messages/{{$index}}'>View Detail</a>
+                    </td>
+                    <td>
+                        <my-important></my-important>
+                    </td>
+                </tr>
+            </table>
+
+            <form>
+                <label>Recipient Selected</label>
+                <select class="form-control" id='sel'>
+                    <option ng-repeat='recipient in recipients'>{{recipient}}</option>
+                </select><hr>
+                <input class="form-control" type='text' placeholder="title" ng-model='title'><br/>
+                <textarea class="form-control" placeholder="discription" ng-model='discription'></textarea><br/>
+                <input class='btn btn-info' type='button' value='Send Message' ng-click='send()'>
+                <a class='btn btn-info' href='#/home'>Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,46 @@
+
+<div class='container'>
+    <div class='row'>
+        <h1 class='text-center'>Message Details</h1>
+        <div class='col-md-6 col-md-offset-3'>
+            <table class='table'>
+                <tr>
+                    <th>Properties</th>
+                    <th>Value</th>
+                </tr>
+                <tr>
+                    <td>Recipient</td>
+                    <td>{{message.recipient}}</td>
+                </tr>
+                <tr>
+                    <td>Sender</td>
+                    <td>{{message.sender}}</td>
+                </tr>
+                <tr>
+                    <td>Title</td>
+                    <td>{{message.title}}</td>
+                </tr>
+                <tr>
+                    <td>Description</td>
+                    <td>{{message.description}}</td>
+                </tr>
+                <tr>
+                    <td>Created Date</td>
+                    <td>{{message.created_at}}</td>
+                </tr>
+                <tr>
+                    <td>Starred</td>
+                    <td><my-important></my-important></td>
+                </tr>
+            </table>
+
+            <textarea class='form-control' placeholder="reply here" ng-model='replytext'></textarea><br/>
+            <button class='btn btn-primary' ng-click='reply()'>Reply</button>
+            <button class='btn btn-primary' ng-click='delete()'>Delete</button>
+            <a class='btn btn-primary' href='#/messages'>Back</a>
+
+        </div>
+
+    </div>
+
+</div>
